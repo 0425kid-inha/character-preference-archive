@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>캐릭터 코드 탐색 | 캐릭터 취향 기록 시스템</title>
+
+  <link rel="stylesheet" href="./styles/main.css" />
+  <link rel="stylesheet" href="./styles/pages/codes.css" />
+</head>
+
+<body>
+  <div class="app-layout">
+    <!-- 왼쪽 사이드바 -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo-mark">✦</div>
+        <div>
+          <h1>캐릭터 취향<br />기록 시스템</h1>
+          <p>Character Preference Archive</p>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="./index.html" class="nav-item">홈</a>
+        <a href="./characters.html" class="nav-item">캐릭터 탐색</a>
+        <a href="./codes.html" class="nav-item active">코드 탐색</a>
+        <a href="./affections.html" class="nav-item">애착 유형</a>
+        <a href="./memo.html" class="nav-item">기록/메모</a>
+      </nav>
+
+      <div class="sidebar-quote">
+        <p>“이 존재는 왜 이렇게 살아있는 것처럼 느껴지는가?”</p>
+      </div>
+    </aside>
+
+    <!-- 메인 영역 -->
+    <main class="main-content code-page">
+      <!-- 상단 바 -->
+      <header class="topbar">
+        <div class="search-box">
+          <input
+            id="global-search"
+            type="search"
+            placeholder="캐릭터 코드, 설명, 키워드로 검색..."
+          />
+        </div>
+
+        <div class="topbar-actions">
+          <button type="button" class="icon-button" aria-label="테마 변경">☾</button>
+          <button type="button" class="icon-button" aria-label="즐겨찾기">★</button>
+        </div>
+      </header>
+
+      <!-- 페이지 헤더 -->
+      <section class="page-hero">
+        <div class="page-hero-text">
+          <p class="eyebrow">Character Codes</p>
+          <h2>캐릭터 코드 탐색</h2>
+          <p>
+            캐릭터가 어떤 매력 구조로 분류되는지 확인합니다.
+            내적 필연성, 존재감, 광기, 보호본능 등 반복적으로 끌리는 코드를 갤러리처럼 둘러볼 수 있습니다.
+          </p>
+        </div>
+
+        <div class="page-hero-card">
+          <span class="hero-card-label">등록된 코드</span>
+          <strong id="code-count">21</strong>
+          <p>개의 캐릭터 코드</p>
+        </div>
+      </section>
+
+      <!-- 도구 영역 -->
+      <section class="code-toolbar panel">
+        <div class="toolbar-left">
+          <h3>코드 갤러리</h3>
+          <p>카드를 눌러 해당 코드의 상세 설명과 관련 캐릭터를 확인할 수 있습니다.</p>
+        </div>
+
+        <!-- <div class="toolbar-controls">
+          <select id="code-sort">
+            <option value="default">기본 순서</option>
+            <option value="name">이름순</option>
+            <option value="count">관련 캐릭터 많은 순</option>
+          </select>
+
+          <select id="code-category-filter">
+            <option value="">전체 계열</option>
+            <option value="inner">내면/의지</option>
+            <option value="relation">관계/애착</option>
+            <option value="presence">존재감/분위기</option>
+            <option value="tragic">비극/상처</option>
+          </select>
+        </div> -->
+      </section>
+
+      <!-- 코드 갤러리 -->
+      <section
+        id="code-gallery"
+        class="code-gallery"
+        aria-label="캐릭터 코드 목록"
+      >
+        <!-- 아래 카드들은 샘플. 나중에 JS로 자동 생성 가능 -->
+
+        <button type="button" class="code-gallery-card" data-code-id="internal-necessity">
+          <div class="code-card-image">
+            <img src="#" alt="내적 필연성 아이콘" />
+          </div>
+
+          <div class="code-card-body">
+            <span class="code-card-kicker">Inner Drive</span>
+            <h3>내적 필연성</h3>
+            <p>행동이 외부 명령이 아니라, 그 인물의 내면에서 필연적으로 흘러나오는 코드.</p>
+          </div>
+
+          <div class="code-card-footer">
+            <span>관련 캐릭터</span>
+            <strong>0명</strong>
+          </div>
+        </button>
+
+        <button type="button" class="code-gallery-card" data-code-id="presence">
+          <div class="code-card-image">
+            <img src="#" alt="존재감형 아이콘" />
+          </div>
+
+          <div class="code-card-body">
+            <span class="code-card-kicker">Presence</span>
+            <h3>존재감형</h3>
+            <p>많은 설명 없이도 화면을 장악하고, 인물 자체의 밀도로 각인되는 코드.</p>
+          </div>
+
+          <div class="code-card-footer">
+            <span>관련 캐릭터</span>
+            <strong>0명</strong>
+          </div>
+        </button>
+
+        <button type="button" class="code-gallery-card" data-code-id="madness">
+          <div class="code-card-image">
+            <img src="#" alt="광기형 아이콘" />
+          </div>
+
+          <div class="code-card-body">
+            <span class="code-card-kicker">Madness</span>
+            <h3>광기형</h3>
+            <p>피상적 중2병이 아니라, 세계와의 균열에서 발생하는 불안정한 에너지.</p>
+          </div>
+
+          <div class="code-card-footer">
+            <span>관련 캐릭터</span>
+            <strong>0명</strong>
+          </div>
+        </button>
+
+        <button type="button" class="code-gallery-card" data-code-id="protection">
+          <div class="code-card-image">
+            <img src="#" alt="보호본능형 아이콘" />
+          </div>
+
+          <div class="code-card-body">
+            <span class="code-card-kicker">Protective Pull</span>
+            <h3>보호본능형</h3>
+            <p>연약함, 순수함, 불안정함이 돌보고 싶다는 감정을 불러오는 코드.</p>
+          </div>
+
+          <div class="code-card-footer">
+            <span>관련 캐릭터</span>
+            <strong>0명</strong>
+          </div>
+        </button>
+
+        <button type="button" class="code-gallery-card" data-code-id="cute-moe">
+          <div class="code-card-image">
+            <img src="#" alt="귀여움/모에형 아이콘" />
+          </div>
+
+          <div class="code-card-body">
+            <span class="code-card-kicker">Cute / Moe</span>
+            <h3>귀여움/모에형</h3>
+            <p>작고 사소한 행동, 표정, 습관에서 애착과 안정감을 느끼게 하는 코드.</p>
+          </div>
+
+          <div class="code-card-footer">
+            <span>관련 캐릭터</span>
+            <strong>0명</strong>
+          </div>
+        </button>
+
+        <button type="button" class="code-gallery-card" data-code-id="responsibility">
+          <div class="code-card-image">
+            <img src="#" alt="책임과 속죄 아이콘" />
+          </div>
+
+          <div class="code-card-body">
+            <span class="code-card-kicker">Responsibility</span>
+            <h3>책임과 속죄</h3>
+            <p>자신의 선택과 상처를 회피하지 않고, 짊어지는 방식으로 존재하는 코드.</p>
+          </div>
+
+          <div class="code-card-footer">
+            <span>관련 캐릭터</span>
+            <strong>0명</strong>
+          </div>
+        </button>
+      </section>
+    </main>
+  </div>
+  <script type="module" src="./scripts/main.js"></script>
+  <script type="module" src="./scripts/pages/codes.js"></script>
+</body>
+</html>

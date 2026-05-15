@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>캐릭터 취향 기록 시스템</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+</head>
+
+<body>
+  <div class="app-layout">
+    <!-- 왼쪽 사이드바 -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo-mark">✦</div>
+        <div>
+          <h1>캐릭터 취향<br />기록 시스템</h1>
+          <p>Character Preference Archive</p>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="#dashboard" class="nav-item active">홈</a>
+        <a href="#characters" class="nav-item">캐릭터 탐색</a>
+        <a href="#codes" class="nav-item">코드 탐색</a>
+        <a href="#affections" class="nav-item">애착 유형</a>
+        <a href="#memo" class="nav-item">기록/메모</a>
+      </nav>
+
+      <div class="sidebar-quote">
+        <p>“이 존재는 왜 이렇게 살아있는 것처럼 느껴지는가?”</p>
+      </div>
+    </aside>
+
+    <!-- 메인 영역 -->
+    <main class="main-content">
+      <!-- 상단 바 -->
+      <!-- <header class="topbar">
+        <div class="search-box">
+          <input
+            id="global-search"
+            type="search"
+            placeholder="캐릭터, 작품, 코드, 키워드로 검색..."
+          />
+        </div>
+
+        <div class="topbar-actions">
+          <button type="button" class="icon-button" aria-label="테마 변경">☾</button>
+          <button type="button" class="icon-button" aria-label="즐겨찾기">★</button>
+        </div>
+      </header> -->
+
+      <!-- 대시보드 -->
+      <section id="dashboard" class="dashboard-section">
+        <div class="section-title-row">
+          <div>
+            <h2>한눈에 보기</h2>
+            <p>현재 기록된 캐릭터, 코드, 애착 유형을 요약합니다.</p>
+          </div>
+        </div>
+
+        <div class="summary-grid">
+          <button class="summary-card" data-href="./characters.html">
+            <span class="summary-icon">👤</span>
+            <div>
+              <strong id="character-count">0</strong>
+              <p>전체 캐릭터</p>
+            </div>
+          </button>
+
+          <button class="summary-card" data-href="./codes.html">
+            <span class="summary-icon">◆</span>
+            <div>
+              <strong id="code-count">0</strong>
+              <p>캐릭터 코드</p>
+            </div>
+          </button>
+
+          <button class="summary-card" data-href="./affections.html">
+            <span class="summary-icon">♥</span>
+            <div>
+              <strong id="affection-count">0</strong>
+              <p>애착 유형</p>
+            </div>
+          </button>
+
+          <button class="summary-card">
+            <span class="summary-icon">✎</span>
+            <div>
+              <strong id="memo-count">0</strong>
+              <p>기록/메모</p>
+            </div>
+          </button>
+        </div>
+      </section>
+
+      <!-- 최근 / 주요 캐릭터 -->
+      <section class="featured-section">
+        <div class="section-title-row">
+          <div>
+            <h2>주요 캐릭터</h2>
+            <p>아이콘과 함께 캐릭터를 빠르게 훑어봅니다.</p>
+          </div>
+          <button type="button" class="text-button">더보기</button>
+        </div>
+
+        <div id="featured-character-list" class="featured-character-list">
+          <!-- app2.js에서 캐릭터 카드 생성 -->
+          <!-- 예시 구조:
+          <article class="featured-character-card">
+            <div class="character-icon">
+              <img src="./images/characters/sample.png" alt="캐릭터 이름" />
+            </div>
+            <h3>캐릭터 이름</h3>
+            <p>작품명</p>
+          </article>
+          -->
+        </div>
+      </section>
+
+      <!-- 탐색 바로가기 -->
+      <!-- <section class="quick-links-section">
+        <div class="section-title-row">
+          <div>
+            <h2>탐색 바로가기</h2>
+            <p>원하는 기준으로 캐릭터를 탐색합니다.</p>
+          </div>
+        </div>
+
+        <div class="quick-link-grid">
+          <button type="button" class="quick-link-card" data-target="characters">
+            <span>🔍</span>
+            <strong>캐릭터 탐색</strong>
+            <p>전체 캐릭터 둘러보기</p>
+          </button>
+
+          <button type="button" class="quick-link-card" data-target="codes">
+            <span>◆</span>
+            <strong>코드 탐색</strong>
+            <p>캐릭터 코드를 기준으로 보기</p>
+          </button>
+
+          <button type="button" class="quick-link-card" data-target="affections">
+            <span>♥</span>
+            <strong>애착 유형 탐색</strong>
+            <p>끌리는 감정의 형태로 보기</p>
+          </button>
+
+          <button type="button" class="quick-link-card" data-target="memo">
+            <span>✎</span>
+            <strong>기록/메모</strong>
+            <p>분석 메모 모아보기</p>
+          </button>
+        </div>
+      </section> -->
+
+      <!-- 하단 탐색 레이아웃 -->
+      <section class="workspace-grid">
+        <!-- 캐릭터 목록 -->
+        <section id="characters" class="panel character-browser-panel">
+          <div class="panel-header">
+            <div>
+              <h2>캐릭터 탐색</h2>
+              <p>검색과 필터를 통해 캐릭터를 찾아봅니다.</p>
+            </div>
+          </div>
+
+          <div class="filter-row">
+            <select id="work-filter">
+              <option value="">전체 작품</option>
+            </select>
+
+            <select id="code-filter">
+              <option value="">전체 코드</option>
+            </select>
+
+            <select id="affection-filter">
+              <option value="">전체 애착 유형</option>
+            </select>
+
+            <input
+              id="character-search"
+              type="search"
+              placeholder="캐릭터명 검색..."
+            />
+          </div>
+
+          <div id="character-card-list" class="character-card-list">
+            <!-- app2.js에서 캐릭터 목록 카드 생성 -->
+          </div>
+        </section>
+
+        <!-- 캐릭터 상세 -->
+
+
+        <!-- 코드 탐색 -->
+        <section id="codes" class="panel code-browser-panel">
+          <div class="panel-header">
+            <div>
+              <h2>코드 탐색</h2>
+              <p>캐릭터가 어떤 매력 구조로 분류되는지 확인합니다.</p>
+            </div>
+          </div>
+
+          <div id="code-card-list" class="code-card-list">
+            <!-- app2.js에서 코드 카드 생성 -->
+          </div>
+        </section>
+
+        <!-- 애착 유형 탐색 -->
+        <section id="affections" class="panel affection-browser-panel">
+          <div class="panel-header">
+            <div>
+              <h2>애착 유형</h2>
+              <p>캐릭터에게 느끼는 감정의 형태를 기준으로 탐색합니다.</p>
+            </div>
+          </div>
+
+          <div id="affection-card-list" class="affection-card-list">
+            <!-- app2.js에서 애착 유형 카드 생성 -->
+          </div>
+        </section>
+
+        <!-- 기록/메모 -->
+        <section id="memo" class="panel memo-panel">
+          <div class="panel-header">
+            <div>
+              <h2>기록/메모</h2>
+              <p>캐릭터별 분석 기록과 감정 메모를 모아봅니다.</p>
+            </div>
+          </div>
+
+          <div id="memo-list" class="memo-list">
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+  <script type="module" src="./scripts/main.js"></script>
+  <script type="module" src="./scripts/pages/home.js"></script>
+  
+</body>
+</html>

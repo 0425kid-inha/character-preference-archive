@@ -1,0 +1,123 @@
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.summary-card {
+  width: 100%;
+  text-align: left;
+  border: 1px solid var(--line);
+  appearance: none;
+  font: inherit;
+  color: inherit;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px;
+  min-height: 108px;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: 0.18s ease;
+}
+
+.summary-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+}
+
+.summary-card:focus-visible {
+  outline: 3px solid rgba(99, 102, 241, 0.35);
+  outline-offset: 3px;
+}
+
+.summary-card:nth-child(1) .summary-icon {
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+.summary-card:nth-child(2) .summary-icon {
+  background: #f5f3ff;
+  color: #7c3aed;
+}
+
+.summary-card:nth-child(3) .summary-icon {
+  background: var(--green-soft);
+  color: var(--green);
+}
+
+.summary-card:nth-child(4) .summary-icon {
+  background: var(--pink-soft);
+  color: var(--pink);
+}
+
+.summary-icon {
+  flex: 0 0 auto;
+  width: 54px;
+  height: 54px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  font-size: 23px;
+}
+
+.summary-card strong {
+  display: block;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.summary-card p {
+  margin: 8px 0 0;
+  color: var(--text-soft);
+  font-size: 14px;
+}
+
+.quick-link-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.quick-link-card {
+  text-align: left;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  transition: 0.18s ease;
+}
+
+.quick-link-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+}
+
+.quick-link-card span {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 14px;
+  border-radius: 14px;
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+.quick-link-card strong {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.quick-link-card p {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 13px;
+}

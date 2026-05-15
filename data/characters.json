@@ -1,0 +1,272 @@
+[
+  {
+    "id": 1,
+    "name": "Batman",
+    "work": "DC"
+  },
+  {
+    "id": 2,
+    "name": "Joker",
+    "work": "DC"
+  },
+  {
+    "id": 3,
+    "name": "Light Yagami",
+    "work": "Death Note"
+  },
+  {
+    "id": 4,
+    "name": "L",
+    "work": "Death Note"
+  },
+  {
+    "id": 5,
+    "name": "Roswaal L Mathers",
+    "work": "Re:Zero"
+  },
+  {
+    "id": 6,
+    "name": "Petelgeuse Romanee-Conti",
+    "work": "Re:Zero"
+  },
+  {
+    "id": 7,
+    "name": "Gendo Ikari",
+    "work": "Neon Genesis Evangelion"
+  },
+  {
+    "id": 8,
+    "name": "Kaworu Nagisa",
+    "work": "Neon Genesis Evangelion"
+  },
+  {
+    "id": 9,
+    "name": "Asuka Langley Soryu",
+    "work": "Neon Genesis Evangelion"
+  },
+  {
+    "id": 10,
+    "name": "Rei Ayanami",
+    "work": "Neon Genesis Evangelion"
+  },
+  {
+    "id": 11,
+    "name": "Simon",
+    "work": "Gurren Lagann"
+  },
+  {
+    "id": 12,
+    "name": "Kamina",
+    "work": "Gurren Lagann"
+  },
+  {
+    "id": 13,
+    "name": "Lordgenome",
+    "work": "Gurren Lagann"
+  },
+  {
+    "id": 14,
+    "name": "Anti-Spiral",
+    "work": "Gurren Lagann"
+  },
+  {
+    "id": 15,
+    "name": "Majin Buu",
+    "work": "Dragon Ball"
+  },
+  {
+    "id": 16,
+    "name": "Kid Buu",
+    "work": "Dragon Ball"
+  },
+  {
+    "id": 17,
+    "name": "Broly",
+    "work": "Dragon Ball"
+  },
+  {
+    "id": 18,
+    "name": "Frieza",
+    "work": "Dragon Ball"
+  },
+  {
+    "id": 19,
+    "name": "Cell",
+    "work": "Dragon Ball"
+  },
+  {
+    "id": 20,
+    "name": "T-800",
+    "work": "The Terminator"
+  },
+  {
+    "id": 21,
+    "name": "T-1000",
+    "work": "Terminator 2"
+  },
+  {
+    "id": 22,
+    "name": "Anton Chigurh",
+    "work": "No Country for Old Men"
+  },
+  {
+    "id": 23,
+    "name": "Rick Sanchez",
+    "work": "Rick and Morty"
+  },
+  {
+    "id": 24,
+    "name": "Cave Johnson",
+    "work": "Portal"
+  },
+  {
+    "id": 25,
+    "name": "GLaDOS",
+    "work": "Portal"
+  },
+  {
+    "id": 26,
+    "name": "Megamind",
+    "work": "Megamind"
+  },
+  {
+    "id": 27,
+    "name": "Metro Man",
+    "work": "Megamind"
+  },
+  {
+    "id": 28,
+    "name": "The Penguin",
+    "work": "Gotham"
+  },
+  {
+    "id": 29,
+    "name": "The Riddler",
+    "work": "Gotham"
+  },
+  {
+    "id": 30,
+    "name": "Harvey Dent",
+    "work": "DC"
+  },
+  {
+    "id": 31,
+    "name": "Bill Cipher",
+    "work": "Gravity Falls"
+  },
+  {
+    "id": 32,
+    "name": "Tony Stark",
+    "work": "Marvel"
+  },
+  {
+    "id": 33,
+    "name": "Steve Rogers",
+    "work": "Marvel"
+  },
+  {
+    "id": 34,
+    "name": "Doctor Octopus",
+    "work": "Marvel"
+  },
+  {
+    "id": 35,
+    "name": "King Bradley",
+    "work": "Fullmetal Alchemist"
+  },
+  {
+    "id": 36,
+    "name": "Rikka Takanashi",
+    "work": "Love, Chunibyo & Other Delusions"
+  },
+  {
+    "id": 37,
+    "name": "Index Librorum Prohibitorum",
+    "work": "A Certain Magical Index"
+  },
+  {
+    "id": 38,
+    "name": "Mikoto Misaka",
+    "work": "A Certain Scientific Railgun"
+  },
+  {
+    "id": 39,
+    "name": "Frenda Seivelun",
+    "work": "A Certain Magical Index"
+  },
+  {
+    "id": 40,
+    "name": "Accelerator",
+    "work": "A Certain Magical Index"
+  },
+  {
+    "id": 41,
+    "name": "Kuroko Shirai",
+    "work": "A Certain Scientific Railgun"
+  },
+  {
+    "id": 42,
+    "name": "Last Order",
+    "work": "A Certain Magical Index"
+  },
+  {
+    "id": 43,
+    "name": "Ai Hinatsuru",
+    "work": "The Ryuo's Work Is Never Done!"
+  },
+  {
+    "id": 44,
+    "name": "Chi",
+    "work": "Tiger Coming In"
+  },
+  {
+    "id": 45,
+    "name": "Rang-i",
+    "work": "Tiger Coming In"
+  },
+  {
+    "id": 46,
+    "name": "Iroha Isshiki",
+    "work": "My Teen Romantic Comedy SNAFU"
+  },
+  {
+    "id": 47,
+    "name": "Yui Yuigahama",
+    "work": "My Teen Romantic Comedy SNAFU"
+  },
+  {
+    "id": 48,
+    "name": "Miguel Caballero Rojo",
+    "work": "Tekken"
+  },
+  {
+    "id": 49,
+    "name": "Sergei Dragunov",
+    "work": "Tekken"
+  },
+  {
+    "id": 50,
+    "name": "Z",
+    "work": "One Piece Film Z"
+  },
+  {
+    "id": 51,
+    "name": "Shizuka Kuze",
+    "work": "Takopi's Original Sin"
+  },
+  {
+    "id": 52,
+    "name": "Frisk",
+    "work": "Undertale"
+  },
+  {
+    "id": 53,
+    "name": "Sans",
+    "work": "Undertale"
+  },
+  {
+    "id": 54,
+    "name": "Mikael",
+    "work": "Original Character"
+  }
+]

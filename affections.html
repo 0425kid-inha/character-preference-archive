@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>캐릭터 애착 유형 탐색 | 캐릭터 취향 기록 시스템</title>
+
+  <link rel="stylesheet" href="./styles/main.css" />
+  <link rel="stylesheet" href="./styles/pages/affections.css" />
+</head>
+
+<body>
+  <div class="app-layout">
+    <!-- 왼쪽 사이드바 -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo-mark">✦</div>
+        <div>
+          <h1>캐릭터 취향<br />기록 시스템</h1>
+          <p>Character Preference Archive</p>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="./index.html" class="nav-item">홈</a>
+        <a href="./characters.html" class="nav-item">캐릭터 탐색</a>
+        <a href="./affections.html" class="nav-item active">애착 유형 탐색</a>
+        <a href="./affections.html" class="nav-item">애착 유형</a>
+        <a href="./memo.html" class="nav-item">기록/메모</a>
+      </nav>
+
+      <div class="sidebar-quote">
+        <p>“이 존재는 왜 이렇게 살아있는 것처럼 느껴지는가?”</p>
+      </div>
+    </aside>
+
+    <!-- 메인 영역 -->
+    <main class="main-content affection-page">
+      <!-- 상단 바 -->
+      <header class="topbar">
+        <div class="search-box">
+          <input
+            id="global-search"
+            type="search"
+            placeholder="캐릭터 애착 유형, 설명, 키워드로 검색..."
+          />
+        </div>
+
+        <div class="topbar-actions">
+          <button type="button" class="icon-button" aria-label="테마 변경">☾</button>
+          <button type="button" class="icon-button" aria-label="즐겨찾기">★</button>
+        </div>
+      </header>
+
+      <!-- 페이지 헤더 -->
+      <section class="page-hero">
+        <div class="page-hero-text">
+          <p class="eyebrow">Character affections</p>
+          <h2>애착 유형 탐색</h2>
+          <p>
+            캐릭터가 어떤 매력 구조로 분류되는지 확인합니다.
+            내적 필연성, 존재감, 광기, 보호본능 등 반복적으로 끌리는 애착 유형를 갤러리처럼 둘러볼 수 있습니다.
+          </p>
+        </div>
+
+        <div class="page-hero-card">
+          <span class="hero-card-label">등록된 애착 유형</span>
+          <strong id="affection-count">0</strong>
+          <p>개의 애착 유형</p>
+        </div>
+      </section>
+
+      <!-- 도구 영역 -->
+      <section class="affection-toolbar panel">
+        <div class="toolbar-left">
+          <h3>애착 유형 갤러리</h3>
+          <p>카드를 눌러 해당 애착 유형의 상세 설명과 관련 캐릭터를 확인할 수 있습니다.</p>
+        </div>
+      </section>
+
+      <!-- 애착 유형 갤러리 -->
+      <section
+        id="affection-gallery"
+        class="affection-gallery"
+        aria-label="캐릭터 애착 유형 목록"
+      >
+       
+      </section>
+    </main>
+  </div>
+  <script type="module" src="./scripts/main.js"></script>
+  <script type="module" src="./scripts/pages/affections.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>캐릭터 취향 기록 시스템</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+</head>
+
+<body>
+  <div class="app-layout">
+    <!-- 왼쪽 사이드바 -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo-mark">✦</div>
+        <div>
+          <h1>캐릭터 취향<br />기록 시스템</h1>
+          <p>Character Preference Archive</p>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="#dashboard" class="nav-item active">홈</a>
+        <a href="#characters" class="nav-item">캐릭터 탐색</a>
+        <a href="#codes" class="nav-item">코드 탐색</a>
+        <a href="#affections" class="nav-item">애착 유형</a>
+        <a href="#memo" class="nav-item">기록/메모</a>
+      </nav>
+
+      <div class="sidebar-quote">
+        <p>“이 존재는 왜 이렇게 살아있는 것처럼 느껴지는가?”</p>
+      </div>
+    </aside>
+
+    <!-- 메인 영역 -->
+    <main class="main-content">
+      <!-- 상단 바 -->
+      <!-- <header class="topbar">
+        <div class="search-box">
+          <input
+            id="global-search"
+            type="search"
+            placeholder="캐릭터, 작품, 코드, 키워드로 검색..."
+          />
+        </div>
+
+        <div class="topbar-actions">
+          <button type="button" class="icon-button" aria-label="테마 변경">☾</button>
+          <button type="button" class="icon-button" aria-label="즐겨찾기">★</button>
+        </div>
+      </header> -->
+
+      <!-- 대시보드 -->
+      <section id="dashboard" class="dashboard-section">
+        <div class="section-title-row">
+          <div>
+            <h2>한눈에 보기</h2>
+            <p>현재 기록된 캐릭터, 코드, 애착 유형을 요약합니다.</p>
+          </div>
+        </div>
+
+        <div class="summary-grid">
+          <button class="summary-card" data-href="./characters.html">
+            <span class="summary-icon">👤</span>
+            <div>
+              <strong id="character-count">0</strong>
+              <p>전체 캐릭터</p>
+            </div>
+          </button>
+
+          <button class="summary-card" data-href="./codes.html">
+            <span class="summary-icon">◆</span>
+            <div>
+              <strong id="code-count">0</strong>
+              <p>캐릭터 코드</p>
+            </div>
+          </button>
+
+          <button class="summary-card" data-href="./affections.html">
+            <span class="summary-icon">♥</span>
+            <div>
+              <strong id="affection-count">0</strong>
+              <p>애착 유형</p>
+            </div>
+          </button>
+
+          <button class="summary-card">
+            <span class="summary-icon">✎</span>
+            <div>
+              <strong id="memo-count">0</strong>
+              <p>기록/메모</p>
+            </div>
+          </button>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script type="module" src="./scripts/main.js"></script>
+  <script type="module" src="./scripts/pages/home.js"></script>
+  
+</body>
+</html>
