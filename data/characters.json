@@ -2,14 +2,14 @@
   {
     "id": 1,
     "name": "배트맨",
-    "source": "DC",
+    "source": "DC 코믹스",
     "sourceTypeId": "comic",
     "attachmentLevel": 5
   },
   {
     "id": 2,
     "name": "조커(코믹스)",
-    "source": "DC",
+    "source": "DC 코믹스",
     "sourceTypeId": "comic",
     "attachmentLevel": 5
   },
@@ -354,14 +354,14 @@
     "name": "쿠제 시즈카",
     "source": "타코피의 원죄",
     "sourceTypeId": "manga",
-    "attachmentLevel": 3
+    "attachmentLevel": 2
   },
   {
     "id": 52,
     "name": "프리스크",
     "source": "언더테일",
     "sourceTypeId": "game",
-    "attachmentLevel": 3
+    "attachmentLevel": 2
   },
   {
     "id": 53,
@@ -380,8 +380,15 @@
   {
     "id": 55,
     "name": "조커(조커)",
-    "source": "Joker",
+    "source": "조커",
     "sourceTypeId": "movie",
     "attachmentLevel": 4
+  },
+  {
+    "id": 56,
+    "name": "윌리 웡카",
+    "source": "찰리와 초콜릿 공장",
+    "sourceTypeId": "movie",
+    "attachmentLevel": 3
   }
 ]

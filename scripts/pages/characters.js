@@ -136,7 +136,7 @@ async function renderCharacterDetail(character) {
     <div class="detail-top">
       <div class="detail-affection-score">
         <span class="detail-affection-label">애착도</span>
-        <strong>${character.affection_score ?? "-"}</strong>
+        <strong>${character.attachmentLevel ?? "-"}</strong>
       </div>
 
       <button class="detail-close" type="button" aria-label="상세 정보 닫기">×</button>
@@ -144,7 +144,6 @@ async function renderCharacterDetail(character) {
 
     <div class="detail-content">
       <div class="detail-title-block">
-        <span class="detail-type">${getSourceIcon(character.source)}</span>
         <h3>${character.name}</h3>
         <p class="detail-source">${character.source ?? "소속 정보 없음"}</p>
       </div>
