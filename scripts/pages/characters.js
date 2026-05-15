@@ -3,6 +3,7 @@ const dom = {
   countText: document.querySelector("#character-count"),
   detail: document.querySelector("#character-detail"),
   archiveBody: document.querySelector(".archive-body"),
+  sortSelect: document.querySelector("#sort-select"),
 };
 
 let state = {
@@ -18,6 +19,7 @@ initCharactersPage();
 
 async function initCharactersPage() {
   console.log("init character page!");
+
   try {
     const db = await window.App.dbReady;
 
@@ -27,8 +29,12 @@ async function initCharactersPage() {
     state.characterAffectionMap = db.characterAffectionMap ?? [];
     state.characterCodeMap = db.characterCodeMap ?? [];
 
-    renderCharacterGrid(state.characters);
+    applyFiltersAndSort();
+    //renderCharacterGrid(state.characters);
     closeCharacterDetail();
+
+    // 필터 및 정렬 기능 할당
+    dom.sortSelect?.addEventListener("change", applyFiltersAndSort);
 
     console.log("캐릭터 페이지 렌더링 완료");
   } catch (error) {
@@ -37,11 +43,8 @@ async function initCharactersPage() {
 }
 
 function renderCharacterGrid(characters) {
-  console.log("render character grid");
-  console.log(dom);
   if (!dom.grid) return;
 
-  console.log("grid가 있네요");
   dom.grid.innerHTML = "";
 
   if (dom.countText) {
@@ -69,9 +72,16 @@ function createCharacterCard(character) {
     .map((code) => code.name);
 
   const tags = [...affectionNames, ...codeNames].slice(0, 2);
+  const affectionLevel = getAffectionLevel(character);
 
   button.innerHTML = `
-    <span class="media-icon">${getSourceIcon(character.source)}</span>
+    <div class="character-card-top">
+      <div class="affection-stars" aria-label="애착도 ${affectionLevel}">
+        ${createAffectionStarsHtml(affectionLevel)}
+      </div>
+
+      <span class="media-icon">${getSourceIcon(character.sourceTypeId)}</span>
+    </div>
 
     ${createCharacterImageHtml(character)}
 
@@ -117,6 +127,7 @@ function selectCharacter(characterId) {
 function renderCharacterDetail(character) {
   console.log("상세정보 보여주기");
   console.log(dom);
+
   if (!dom.detail) return;
 
   const affections = getCharacterAffections(character.id);
@@ -128,7 +139,7 @@ function renderCharacterDetail(character) {
     <button class="detail-close" type="button" aria-label="상세 정보 닫기">×</button>
 
     <div class="detail-top">
-      <span class="detail-type">${getSourceIcon(character.source)} ${getSourceCategory(character.source)}</span>
+      <span class="detail-type">${getSourceIcon(character.source)}</span>
       <h3>${character.name}</h3>
       <p class="detail-source">${character.source ?? "소속 정보 없음"}</p>
     </div>
@@ -139,7 +150,12 @@ function renderCharacterDetail(character) {
       <div>
         <h4>간단 설명</h4>
         <p>
-          ${character.description ?? affectionMap?.notes ?? codeMap?.notes ?? "아직 설명이 없습니다."}
+          ${
+            character.description ??
+            affectionMap?.notes ??
+            codeMap?.notes ??
+            "아직 설명이 없습니다."
+          }
         </p>
       </div>
     </div>
@@ -149,7 +165,12 @@ function renderCharacterDetail(character) {
       <div class="tag-group">
         ${
           affections.length > 0
-            ? affections.map((affection) => `<span class="tag affection">${affection.name}</span>`).join("")
+            ? affections
+                .map(
+                  (affection) =>
+                    `<span class="tag affection">${affection.name}</span>`
+                )
+                .join("")
             : `<span class="tag empty">등록된 애착 유형 없음</span>`
         }
       </div>
@@ -160,7 +181,9 @@ function renderCharacterDetail(character) {
       <div class="tag-group">
         ${
           codes.length > 0
-            ? codes.map((code) => `<span class="tag code">${code.name}</span>`).join("")
+            ? codes
+                .map((code) => `<span class="tag code">${code.name}</span>`)
+                .join("")
             : `<span class="tag empty">등록된 캐릭터 코드 없음</span>`
         }
       </div>
@@ -172,7 +195,9 @@ function renderCharacterDetail(character) {
     </div>
   `;
 
-  dom.detail.querySelector(".detail-close")?.addEventListener("click", closeCharacterDetail);
+  dom.detail
+    .querySelector(".detail-close")
+    ?.addEventListener("click", closeCharacterDetail);
 }
 
 function openCharacterDetail() {
@@ -200,7 +225,11 @@ function getCharacterAffections(characterId) {
   if (!map) return [];
 
   return (map.affection_type_ids ?? [])
-    .map((id) => state.affectionTypes.find((affection) => Number(affection.id) === Number(id)))
+    .map((id) =>
+      state.affectionTypes.find(
+        (affection) => Number(affection.id) === Number(id)
+      )
+    )
     .filter(Boolean);
 }
 
@@ -209,7 +238,9 @@ function getCharacterCodes(characterId) {
   if (!map) return [];
 
   return (map.code_ids ?? [])
-    .map((id) => state.characterCodes.find((code) => Number(code.id) === Number(id)))
+    .map((id) =>
+      state.characterCodes.find((code) => Number(code.id) === Number(id))
+    )
     .filter(Boolean);
 }
 
@@ -223,6 +254,22 @@ function getCharacterCodeMap(characterId) {
   return state.characterCodeMap.find(
     (item) => Number(item.character_id) === Number(characterId)
   );
+}
+
+function getAffectionLevel(character) {
+  const rawLevel = character.attachmentLevel;
+
+  const level = Number(rawLevel);
+
+  if (Number.isNaN(level)) return 0;
+
+  return Math.max(0, Math.min(5, Math.floor(level)));
+}
+
+function createAffectionStarsHtml(level) {
+  if (level <= 0) return "";
+
+  return Array.from({ length: level }, () => `<span>✦</span>`).join("");
 }
 
 function createCharacterImageHtml(character) {
@@ -306,73 +353,42 @@ function getInitial(name) {
   return String(name ?? "?").trim().charAt(0).toUpperCase();
 }
 
-function getSourceIcon(source) {
-  const text = String(source ?? "").toLowerCase();
-
-  if (
-    text.includes("dc") ||
-    text.includes("dark knight") ||
-    text.includes("terminator") ||
-    text.includes("movie") ||
-    text.includes("film")
-  ) {
-    return "🎬";
+function getSourceIcon(sourcetype) {
+  switch (sourcetype) {
+    case "movie":
+      return "🎬";
+    case "comic":
+      return "💬";
+    case "anime":
+      return "📺";
+    case "game":
+      return "🎮";
+    case "book":
+      return "📚";
+    default:
+      return "✦";
   }
-
-  if (
-    text.includes("blue archive") ||
-    text.includes("dragon ball") ||
-    text.includes("evangelion") ||
-    text.includes("death note") ||
-    text.includes("re:zero")
-  ) {
-    return "📺";
-  }
-
-  if (
-    text.includes("game") ||
-    text.includes("blue archive") ||
-    text.includes("nier")
-  ) {
-    return "🎮";
-  }
-
-  if (
-    text.includes("book") ||
-    text.includes("novel")
-  ) {
-    return "📚";
-  }
-
-  return "✦";
 }
 
-function getSourceCategory(source) {
-  const text = String(source ?? "").toLowerCase();
+function applyFiltersAndSort() {
+  console.log("apply filter!");
+  let result = [...state.characters];
 
-  if (
-    text.includes("dc") ||
-    text.includes("dark knight") ||
-    text.includes("terminator")
-  ) {
-    return "영화/코믹스";
+  const sortValue = dom.sortSelect?.value;
+
+  switch (sortValue) {
+    case "affection-desc":
+      result.sort((a, b) => {
+        return getAffectionLevel(b) - getAffectionLevel(a);
+      });
+      break;
+
+    case "name":
+      result.sort((a, b) => {
+        return a.name.localeCompare(b.name, "ko");
+      });
+      break;
   }
 
-  if (
-    text.includes("dragon ball") ||
-    text.includes("evangelion") ||
-    text.includes("death note") ||
-    text.includes("re:zero")
-  ) {
-    return "애니메이션";
-  }
-
-  if (
-    text.includes("blue archive") ||
-    text.includes("nier")
-  ) {
-    return "게임";
-  }
-
-  return "작품";
+  renderCharacterGrid(result);
 }

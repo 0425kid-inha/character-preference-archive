@@ -34,22 +34,7 @@
     </aside>
 
     <main class="main-content characters-page">
-      <section class="page-hero">
-        <div class="page-hero-text">
-          <p class="eyebrow">Character Archive</p>
-          <h2>캐릭터 탐색</h2>
-          <p>
-            내가 애착을 느낀 캐릭터들을 모아보고, 애착 유형과 캐릭터 코드를 기준으로
-            다시 탐색합니다.
-          </p>
-        </div>
 
-        <div class="page-hero-card">
-          <span class="hero-card-label">등록된 캐릭터</span>
-          <strong id="character-count">54</strong>
-          <p>개의 캐릭터</p>
-        </div>
-      </section>
 
       <section class="character-archive panel">
         <div class="archive-header">
@@ -80,11 +65,11 @@
             <option>존재감</option>
           </select>
 
-          <select>
-            <option>이름순</option>
+          <select id="sort-select">
+            <option value="affection-desc">애착 강도순</option>
+            <option value="name">이름순</option>
             <option>최근 추가순</option>
             <option>작품순</option>
-            <option>애착 강도순</option>
           </select>
         </div>
 

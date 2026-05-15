@@ -2,266 +2,386 @@
   {
     "id": 1,
     "name": "배트맨",
-    "source": "DC"
+    "source": "DC",
+    "sourceTypeId": "comic",
+    "attachmentLevel": 5
   },
   {
     "id": 2,
-    "name": "조커",
-    "source": "DC"
+    "name": "조커(코믹스)",
+    "source": "DC",
+    "sourceTypeId": "comic",
+    "attachmentLevel": 5
   },
   {
     "id": 3,
     "name": "야가미 라이토",
-    "source": "데스노트"
+    "source": "데스노트",
+    "sourceTypeId": "anime",
+    "attachmentLevel": 5
   },
   {
     "id": 4,
     "name": "L",
-    "source": "데스노트"
+    "source": "데스노트",
+    "sourceTypeId": "anime",
+    "attachmentLevel": 5
   },
   {
     "id": 5,
-    "name": "Roswaal L Mathers",
-    "source": "Re:Zero"
+    "name": "로즈월 L. 메이더스",
+    "source": "Re:제로부터 시작하는 이세계 생활",
+    "sourceTypeId": "anime",
+    "attachmentLevel": 3
   },
   {
     "id": 6,
-    "name": "Petelgeuse Romanee-Conti",
-    "source": "Re:Zero"
+    "name": "페텔기우스 로마네콩티",
+    "source": "Re:제로부터 시작하는 이세계 생활",
+    "sourceTypeId": "anime",
+    "attachmentLevel": 3
   },
   {
     "id": 7,
-    "name": "Gendo Ikari",
-    "source": "에반게리온"
+    "name": "이카리 겐도",
+    "source": "신세기 에반게리온",
+    "sourceTypeId": "anime",
+    "attachmentLevel": 4
   },
   {
     "id": 8,
-    "name": "Kaworu Nagisa",
-    "source": "에반게리온"
+    "name": "나기사 카오루",
+    "source": "신세기 에반게리온",
+    "sourceTypeId": "anime",
+    "attachmentLevel": 1
   },
   {
     "id": 9,
-    "name": "Asuka Langley Soryu",
-    "source": "에반게리온"
+    "name": "소류 아스카 랑그레이",
+    "source": "신세기 에반게리온",
+    "sourceTypeId": "anime",
+    "attachmentLevel": 2
   },
   {
     "id": 10,
-    "name": "Rei Ayanami",
-    "source": "에반게리온"
+    "name": "아야나미 레이",
+    "source": "신세기 에반게리온",
+    "sourceTypeId": "anime",
+    "attachmentLevel": 2
   },
   {
     "id": 11,
-    "name": "Simon",
-    "source": "천원돌파 그렌라간"
+    "name": "시몬",
+    "source": "천원돌파 그렌라간",
+    "sourceTypeId": "anime",
+    "attachmentLevel": 3
   },
   {
     "id": 12,
-    "name": "Kamina",
-    "source": "천원돌파 그렌라간"
+    "name": "카미나",
+    "source": "천원돌파 그렌라간",
+    "sourceTypeId": "anime",
+    "attachmentLevel": 4
   },
   {
     "id": 13,
-    "name": "Lordgenome",
-    "source": "천원돌파 그렌라간"
+    "name": "로제놈",
+    "source": "천원돌파 그렌라간",
+    "sourceTypeId": "anime",
+    "attachmentLevel": 2
   },
   {
     "id": 14,
-    "name": "Anti-Spiral",
-    "source": "천원돌파 그렌라간"
+    "name": "안티 스파이럴",
+    "source": "천원돌파 그렌라간",
+    "sourceTypeId": "anime",
+    "attachmentLevel": 2
   },
   {
     "id": 15,
-    "name": "Majin Buu",
-    "source": "드래곤볼"
+    "name": "마인 부우",
+    "source": "드래곤볼",
+    "sourceTypeId": "anime",
+    "attachmentLevel": 3
   },
   {
     "id": 16,
-    "name": "Kid Buu",
-    "source": "드래곤볼"
+    "name": "키드 부우",
+    "source": "드래곤볼",
+    "sourceTypeId": "anime",
+    "attachmentLevel": 4
   },
   {
     "id": 17,
-    "name": "Broly",
-    "source": "드래곤볼"
+    "name": "브로리",
+    "source": "드래곤볼",
+    "sourceTypeId": "anime",
+    "attachmentLevel": 4
   },
   {
     "id": 18,
-    "name": "Frieza",
-    "source": "드래곤볼"
+    "name": "프리저",
+    "source": "드래곤볼",
+    "sourceTypeId": "anime",
+    "attachmentLevel": 3
   },
   {
     "id": 19,
-    "name": "Cell",
-    "source": "드래곤볼"
+    "name": "셀",
+    "source": "드래곤볼",
+    "sourceTypeId": "anime",
+    "attachmentLevel": 3
   },
   {
     "id": 20,
     "name": "T-800",
-    "source": "The Terminator"
+    "source": "터미네이터",
+    "sourceTypeId": "movie",
+    "attachmentLevel": 3
   },
   {
     "id": 21,
     "name": "T-1000",
-    "source": "Terminator 2"
+    "source": "터미네이터 2",
+    "sourceTypeId": "movie",
+    "attachmentLevel": 5
   },
   {
     "id": 22,
-    "name": "Anton Chigurh",
-    "source": "No Country for Old Men"
+    "name": "안톤 쉬거",
+    "source": "노인을 위한 나라는 없다",
+    "sourceTypeId": "movie",
+    "attachmentLevel": 3
   },
   {
     "id": 23,
-    "name": "Rick Sanchez",
-    "source": "Rick and Morty"
+    "name": "릭 산체스",
+    "source": "릭 앤 모티",
+    "sourceTypeId": "cartoon",
+    "attachmentLevel": 4
   },
   {
     "id": 24,
-    "name": "Cave Johnson",
-    "source": "Portal"
+    "name": "케이브 존슨",
+    "source": "포탈",
+    "sourceTypeId": "game",
+    "attachmentLevel": 4
   },
   {
     "id": 25,
-    "name": "GLaDOS",
-    "source": "Portal"
+    "name": "글라도스",
+    "source": "포탈",
+    "sourceTypeId": "game",
+    "attachmentLevel": 5
   },
   {
     "id": 26,
-    "name": "Megamind",
-    "source": "Megamind"
+    "name": "메가마인드",
+    "source": "메가마인드",
+    "sourceTypeId": "movie",
+    "attachmentLevel": 3
   },
   {
     "id": 27,
-    "name": "Metro Man",
-    "source": "Megamind"
+    "name": "메트로맨",
+    "source": "메가마인드",
+    "sourceTypeId": "movie",
+    "attachmentLevel": 2
   },
   {
     "id": 28,
-    "name": "The Penguin",
-    "source": "Gotham"
+    "name": "펭귄",
+    "source": "고담",
+    "sourceTypeId": "drama",
+    "attachmentLevel": 4
   },
   {
     "id": 29,
-    "name": "The Riddler",
-    "source": "Gotham"
+    "name": "리들러",
+    "source": "고담",
+    "sourceTypeId": "drama",
+    "attachmentLevel": 3
   },
   {
     "id": 30,
-    "name": "Harvey Dent",
-    "source": "DC"
+    "name": "하비 덴트",
+    "source": "Dark Knight",
+    "sourceTypeId": "movie",
+    "attachmentLevel": 4
   },
   {
     "id": 31,
-    "name": "Bill Cipher",
-    "source": "Gravity Falls"
+    "name": "빌 사이퍼",
+    "source": "그래비티 폴즈",
+    "sourceTypeId": "cartoon",
+    "attachmentLevel": 3
   },
   {
     "id": 32,
-    "name": "Tony Stark",
-    "source": "Marvel"
+    "name": "토니 스타크",
+    "source": "마블",
+    "sourceTypeId": "movie",
+    "attachmentLevel": 4
   },
   {
     "id": 33,
-    "name": "Steve Rogers",
-    "source": "Marvel"
+    "name": "스티브 로저스",
+    "source": "마블",
+    "sourceTypeId": "movie",
+    "attachmentLevel": 3
   },
   {
     "id": 34,
-    "name": "Doctor Octopus",
-    "source": "Marvel"
+    "name": "닥터 옥토퍼스",
+    "source": "마블",
+    "sourceTypeId": "movie",
+    "attachmentLevel": 3
   },
   {
     "id": 35,
-    "name": "King Bradley",
-    "source": "Fullmetal Alchemist"
+    "name": "킹 브래드레이",
+    "source": "강철의 연금술사",
+    "sourceTypeId": "anime",
+    "attachmentLevel": 4
   },
   {
     "id": 36,
-    "name": "Rikka Takanashi",
-    "source": "Love, Chunibyo & Other Delusions"
+    "name": "타카나시 릿카",
+    "source": "중2병이라도 사랑이 하고 싶어!",
+    "sourceTypeId": "anime",
+    "attachmentLevel": 5
   },
   {
     "id": 37,
-    "name": "Index Librorum Prohibitorum",
-    "source": "A Certain Magical Index"
+    "name": "인덱스",
+    "source": "어떤 마술의 금서목록",
+    "sourceTypeId": "anime",
+    "attachmentLevel": 2
   },
   {
     "id": 38,
-    "name": "Mikoto Misaka",
-    "source": "A Certain Scientific Railgun"
+    "name": "미사카 미코토",
+    "source": "어떤 과학의 초전자포",
+    "sourceTypeId": "anime",
+    "attachmentLevel": 3
   },
   {
     "id": 39,
-    "name": "Frenda Seivelun",
-    "source": "A Certain Magical Index"
+    "name": "프렌다 세이베른",
+    "source": "어떤 마술의 금서목록",
+    "sourceTypeId": "anime",
+    "attachmentLevel": 2
   },
   {
     "id": 40,
-    "name": "Accelerator",
-    "source": "A Certain Magical Index"
+    "name": "액셀러레이터",
+    "source": "어떤 마술의 금서목록",
+    "sourceTypeId": "anime",
+    "attachmentLevel": 3
   },
   {
     "id": 41,
-    "name": "Kuroko Shirai",
-    "source": "A Certain Scientific Railgun"
+    "name": "시라이 쿠로코",
+    "source": "어떤 과학의 초전자포",
+    "sourceTypeId": "anime",
+    "attachmentLevel": 3
   },
   {
     "id": 42,
-    "name": "Last Order",
-    "source": "A Certain Magical Index"
+    "name": "라스트 오더",
+    "source": "어떤 마술의 금서목록",
+    "sourceTypeId": "anime",
+    "attachmentLevel": 3
   },
   {
     "id": 43,
-    "name": "Ai Hinatsuru",
-    "source": "The Ryuo's source Is Never Done!"
+    "name": "히나츠루 아이",
+    "source": "용왕이 하는 일!",
+    "sourceTypeId": "anime",
+    "attachmentLevel": 2
   },
   {
     "id": 44,
-    "name": "Chi",
-    "source": "Tiger Coming In"
+    "name": "치이",
+    "source": "나와 호랑이님",
+    "sourceTypeId": "webtoon",
+    "attachmentLevel": 3
   },
   {
     "id": 45,
-    "name": "Rang-i",
-    "source": "Tiger Coming In"
+    "name": "랑이",
+    "source": "나와 호랑이님",
+    "sourceTypeId": "webtoon",
+    "attachmentLevel": 3
   },
   {
     "id": 46,
-    "name": "Iroha Isshiki",
-    "source": "My Teen Romantic Comedy SNAFU"
+    "name": "잇시키 이로하",
+    "source": "역시 내 청춘 러브코메디는 잘못됐다.",
+    "sourceTypeId": "anime",
+    "attachmentLevel": 2
   },
   {
     "id": 47,
-    "name": "Yui Yuigahama",
-    "source": "My Teen Romantic Comedy SNAFU"
+    "name": "유이가하마 유이",
+    "source": "역시 내 청춘 러브코메디는 잘못됐다.",
+    "sourceTypeId": "anime",
+    "attachmentLevel": 2
   },
   {
     "id": 48,
-    "name": "Miguel Caballero Rojo",
-    "source": "Tekken"
+    "name": "미겔 카바예로 로호",
+    "source": "철권",
+    "sourceTypeId": "game",
+    "attachmentLevel": 2
   },
   {
     "id": 49,
-    "name": "Sergei Dragunov",
-    "source": "Tekken"
+    "name": "세르게이 드라그노프",
+    "source": "철권",
+    "sourceTypeId": "game",
+    "attachmentLevel": 3
   },
   {
     "id": 50,
-    "name": "Z",
-    "source": "One Piece Film Z"
+    "name": "제트",
+    "source": "원피스 필름 Z",
+    "sourceTypeId": "movie",
+    "attachmentLevel": 3
   },
   {
     "id": 51,
-    "name": "Shizuka Kuze",
-    "source": "Takopi's Original Sin"
+    "name": "쿠제 시즈카",
+    "source": "타코피의 원죄",
+    "sourceTypeId": "manga",
+    "attachmentLevel": 3
   },
   {
     "id": 52,
-    "name": "Frisk",
-    "source": "Undertale"
+    "name": "프리스크",
+    "source": "언더테일",
+    "sourceTypeId": "game",
+    "attachmentLevel": 3
   },
   {
     "id": 53,
-    "name": "Sans",
-    "source": "Undertale"
+    "name": "샌즈",
+    "source": "언더테일",
+    "sourceTypeId": "game",
+    "attachmentLevel": 3
+  },
+  {
+    "id": 54,
+    "name": "조커(다크나이트)",
+    "source": "Dark Knight",
+    "sourceTypeId": "movie",
+    "attachmentLevel": 5
+  },
+  {
+    "id": 55,
+    "name": "조커(조커)",
+    "source": "Joker",
+    "sourceTypeId": "movie",
+    "attachmentLevel": 4
   }
 ]

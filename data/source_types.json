@@ -15,6 +15,11 @@
     "icon": "game.png"
   },
   {
+    "id": "drama",
+    "name": "드라마",
+    "icon": "drama.png"
+  },
+  {
     "id": "comic",
     "name": "만화/코믹스",
     "icon": "comic.png"
