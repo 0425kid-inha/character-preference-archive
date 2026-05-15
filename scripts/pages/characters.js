@@ -124,10 +124,7 @@ function selectCharacter(characterId) {
   openCharacterDetail();
 }
 
-function renderCharacterDetail(character) {
-  console.log("상세정보 보여주기");
-  console.log(dom);
-
+async function renderCharacterDetail(character) {
   if (!dom.detail) return;
 
   const affections = getCharacterAffections(character.id);
@@ -136,68 +133,79 @@ function renderCharacterDetail(character) {
   const codeMap = getCharacterCodeMap(character.id);
 
   dom.detail.innerHTML = `
-    <button class="detail-close" type="button" aria-label="상세 정보 닫기">×</button>
-
     <div class="detail-top">
-      <span class="detail-type">${getSourceIcon(character.source)}</span>
-      <h3>${character.name}</h3>
-      <p class="detail-source">${character.source ?? "소속 정보 없음"}</p>
+      <div class="detail-affection-score">
+        <span class="detail-affection-label">애착도</span>
+        <strong>${character.affection_score ?? "-"}</strong>
+      </div>
+
+      <button class="detail-close" type="button" aria-label="상세 정보 닫기">×</button>
     </div>
 
-    <div class="detail-profile">
-      ${createCharacterDetailImageHtml(character)}
+    <div class="detail-content">
+      <div class="detail-title-block">
+        <span class="detail-type">${getSourceIcon(character.source)}</span>
+        <h3>${character.name}</h3>
+        <p class="detail-source">${character.source ?? "소속 정보 없음"}</p>
+      </div>
 
-      <div>
-        <h4>간단 설명</h4>
-        <p>
+      <div class="detail-profile">
+        ${createCharacterDetailImageHtml(character)}
+
+        <div>
+          <h4>간단 설명</h4>
+          <p>
+            ${
+              character.description ??
+              affectionMap?.notes ??
+              codeMap?.notes ??
+              "아직 설명이 없습니다."
+            }
+          </p>
+        </div>
+      </div>
+
+      <div class="detail-section">
+        <h4>애착 유형</h4>
+        <div class="tag-group">
           ${
-            character.description ??
-            affectionMap?.notes ??
-            codeMap?.notes ??
-            "아직 설명이 없습니다."
+            affections.length > 0
+              ? affections
+                  .map(
+                    (affection) =>
+                      `<span class="tag affection">${affection.name}</span>`
+                  )
+                  .join("")
+              : `<span class="tag empty">등록된 애착 유형 없음</span>`
           }
-        </p>
+        </div>
       </div>
-    </div>
 
-    <div class="detail-section">
-      <h4>애착 유형</h4>
-      <div class="tag-group">
-        ${
-          affections.length > 0
-            ? affections
-                .map(
-                  (affection) =>
-                    `<span class="tag affection">${affection.name}</span>`
-                )
-                .join("")
-            : `<span class="tag empty">등록된 애착 유형 없음</span>`
-        }
+      <div class="detail-section">
+        <h4>캐릭터 코드</h4>
+        <div class="tag-group">
+          ${
+            codes.length > 0
+              ? codes
+                  .map((code) => `<span class="tag code">${code.name}</span>`)
+                  .join("")
+              : `<span class="tag empty">등록된 캐릭터 코드 없음</span>`
+          }
+        </div>
       </div>
-    </div>
 
-    <div class="detail-section">
-      <h4>캐릭터 코드</h4>
-      <div class="tag-group">
-        ${
-          codes.length > 0
-            ? codes
-                .map((code) => `<span class="tag code">${code.name}</span>`)
-                .join("")
-            : `<span class="tag empty">등록된 캐릭터 코드 없음</span>`
-        }
+      <div id="detail-notes" class="detail-section detail-notes-section">
+        <h4>작성된 노트</h4>
+        <p class="note-loading">노트를 불러오는 중...</p>
       </div>
-    </div>
-
-    <div class="detail-section">
-      <h4>작성된 노트</h4>
-      ${createNoteListHtml(character, affectionMap, codeMap)}
     </div>
   `;
 
   dom.detail
     .querySelector(".detail-close")
     ?.addEventListener("click", closeCharacterDetail);
+
+  await renderCharacterNoteList(character.id);
 }
 
 function openCharacterDetail() {
@@ -296,59 +304,6 @@ function createCharacterDetailImageHtml(character) {
   `;
 }
 
-function createNoteListHtml(character, affectionMap, codeMap) {
-  const notes = [];
-
-  if (character.notes) {
-    notes.push({
-      title: `${character.name} 기본 메모`,
-      text: character.notes,
-    });
-  }
-
-  if (affectionMap?.notes) {
-    notes.push({
-      title: "애착 유형 메모",
-      text: affectionMap.notes,
-    });
-  }
-
-  if (codeMap?.notes) {
-    notes.push({
-      title: "캐릭터 코드 메모",
-      text: codeMap.notes,
-    });
-  }
-
-  if (Array.isArray(character.note_ids) && character.note_ids.length > 0) {
-    character.note_ids.forEach((noteId) => {
-      notes.push({
-        title: `노트 #${noteId}`,
-        text: "연결된 노트가 있습니다.",
-      });
-    });
-  }
-
-  if (notes.length === 0) {
-    return `<p class="empty-note">아직 작성된 노트가 없습니다.</p>`;
-  }
-
-  return `
-    <ul class="note-list">
-      ${notes
-        .map(
-          (note) => `
-            <li>
-              <a href="#">${note.title}</a>
-              <span>${note.text}</span>
-            </li>
-          `
-        )
-        .join("")}
-    </ul>
-  `;
-}
-
 function getInitial(name) {
   return String(name ?? "?").trim().charAt(0).toUpperCase();
 }
@@ -391,4 +346,116 @@ function applyFiltersAndSort() {
   }
 
   renderCharacterGrid(result);
+}
+
+/* ================================
+   Character Notes
+   data/notes/notes_index.json을 기준으로
+   현재 캐릭터 index에 연결된 md 노트를 불러온다.
+================================ */
+
+let notesIndexCache = null;
+
+async function loadNotesIndex() {
+  if (notesIndexCache) return notesIndexCache;
+
+  try {
+    const response = await fetch("../data/notes/notes_index.json");
+
+    if (!response.ok) {
+      throw new Error("notes_index.json 로드 실패");
+    }
+
+    notesIndexCache = await response.json();
+    return notesIndexCache;
+  } catch (error) {
+    console.warn("노트 인덱스 로드 실패:", error);
+    notesIndexCache = [];
+    return notesIndexCache;
+  }
+}
+
+async function loadCharacterNoteList(characterIndex) {
+  const notesIndex = await loadNotesIndex();
+
+  return notesIndex
+    .filter((note) => note.character_index === characterIndex)
+    .sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+}
+
+async function renderCharacterNoteList(characterIndex) {
+  const notesSection = document.querySelector("#detail-notes");
+
+  if (!notesSection) {
+    console.warn("#detail-notes 요소를 찾을 수 없습니다.");
+    return;
+  }
+
+  notesSection.innerHTML = `
+    <h4>작성된 노트</h4>
+    <p class="note-loading">노트 목록을 불러오는 중...</p>
+  `;
+
+  const notes = await loadCharacterNoteList(characterIndex);
+  const note_count = notes.length;
+
+  if (note_count === 0) {
+    notesSection.innerHTML = `
+      <h4>작성된 노트(0)</h4>
+      <p class="note-empty">아직 작성된 노트가 없습니다.</p>
+    `;
+    return;
+  }
+
+  notesSection.innerHTML = `
+    <h4>작성된 노트(${note_count})</h4>
+
+    <ul class="note-list">
+      ${notes
+        .map(
+          (note) => `
+            <li>
+              <button
+                type="button"
+                class="note-item-button"
+                data-note-id="${note.id}"
+                data-note-file="${escapeHtml(note.file ?? "")}"
+              >
+                <span class="note-title">${escapeHtml(note.title || "제목 없는 노트")}</span>
+                <span class="note-date">${formatNoteDate(note.created_at)}</span>
+              </button>
+            </li>
+          `
+        )
+        .join("")}
+    </ul>
+  `;
+
+  notesSection.querySelectorAll(".note-item-button").forEach((button) => {
+    button.addEventListener("click", () => {
+      const noteId = Number(button.dataset.noteId);
+      const noteFile = button.dataset.noteFile;
+
+      console.log("노트 클릭:", noteId, noteFile);
+
+      // 나중에 여기에서 노트 상세보기 함수 호출
+      // openNoteDetail(noteId);
+      // 또는 loadNoteContent(noteFile);
+    });
+  });
+}
+
+function formatNoteDate(dateString) {
+  if (!dateString) return "";
+
+  return dateString.replaceAll("-", ".");
+}
+
+function escapeHtml(text) {
+  return String(text)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
 }

@@ -513,34 +513,59 @@
 }
 
 .note-list li {
-  padding: 11px 12px;
+  padding: 0;
   border: 1px solid var(--line);
   border-radius: 13px;
   background: var(--surface-soft);
+  overflow: hidden;
 }
 
-.note-list a {
+.note-list li:hover {
+  border-color: var(--primary);
+}
+
+.note-item-button {
   display: block;
+  width: 100%;
+  padding: 11px 12px;
+  border: none;
+  background: transparent;
   color: var(--text);
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 700;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
 }
 
-.note-list a:hover {
+.note-item-button:hover {
   color: var(--primary);
 }
 
-.note-list span {
+.note-item-button:focus {
+  outline: none;
+}
+
+.note-item-button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: -2px;
+}
+
+.note-title {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.note-date {
   display: block;
   margin-top: 5px;
   color: var(--text-muted);
-  font-size: 11px;
+  font-size: 10px;
+  font-weight: 500;
 }
 
 .empty-note {
   color: var(--text-muted);
-  font-size: 13px;
+  font-size: 18px;
 }
 
 /* ===== RESPONSIVE ===== */
