@@ -1,0 +1,32 @@
+[
+  {
+    "id": "movie",
+    "name": "영화",
+    "icon": "movie.png"
+  },
+  {
+    "id": "anime",
+    "name": "애니",
+    "icon": "anime.png"
+  },
+  {
+    "id": "game",
+    "name": "게임",
+    "icon": "game.png"
+  },
+  {
+    "id": "comic",
+    "name": "만화/코믹스",
+    "icon": "comic.png"
+  },
+  {
+    "id": "cartoon",
+    "name": "애니메이션",
+    "icon": "cartoon.png"
+  },
+  {
+    "id": "etc",
+    "name": "기타",
+    "icon": "etc.png"
+  }
+]

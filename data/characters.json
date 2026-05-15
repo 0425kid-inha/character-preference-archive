@@ -1,272 +1,267 @@
 [
   {
     "id": 1,
-    "name": "Batman",
-    "work": "DC"
+    "name": "배트맨",
+    "source": "DC"
   },
   {
     "id": 2,
-    "name": "Joker",
-    "work": "DC"
+    "name": "조커",
+    "source": "DC"
   },
   {
     "id": 3,
-    "name": "Light Yagami",
-    "work": "Death Note"
+    "name": "야가미 라이토",
+    "source": "데스노트"
   },
   {
     "id": 4,
     "name": "L",
-    "work": "Death Note"
+    "source": "데스노트"
   },
   {
     "id": 5,
     "name": "Roswaal L Mathers",
-    "work": "Re:Zero"
+    "source": "Re:Zero"
   },
   {
     "id": 6,
     "name": "Petelgeuse Romanee-Conti",
-    "work": "Re:Zero"
+    "source": "Re:Zero"
   },
   {
     "id": 7,
     "name": "Gendo Ikari",
-    "work": "Neon Genesis Evangelion"
+    "source": "에반게리온"
   },
   {
     "id": 8,
     "name": "Kaworu Nagisa",
-    "work": "Neon Genesis Evangelion"
+    "source": "에반게리온"
   },
   {
     "id": 9,
     "name": "Asuka Langley Soryu",
-    "work": "Neon Genesis Evangelion"
+    "source": "에반게리온"
   },
   {
     "id": 10,
     "name": "Rei Ayanami",
-    "work": "Neon Genesis Evangelion"
+    "source": "에반게리온"
   },
   {
     "id": 11,
     "name": "Simon",
-    "work": "Gurren Lagann"
+    "source": "천원돌파 그렌라간"
   },
   {
     "id": 12,
     "name": "Kamina",
-    "work": "Gurren Lagann"
+    "source": "천원돌파 그렌라간"
   },
   {
     "id": 13,
     "name": "Lordgenome",
-    "work": "Gurren Lagann"
+    "source": "천원돌파 그렌라간"
   },
   {
     "id": 14,
     "name": "Anti-Spiral",
-    "work": "Gurren Lagann"
+    "source": "천원돌파 그렌라간"
   },
   {
     "id": 15,
     "name": "Majin Buu",
-    "work": "Dragon Ball"
+    "source": "드래곤볼"
   },
   {
     "id": 16,
     "name": "Kid Buu",
-    "work": "Dragon Ball"
+    "source": "드래곤볼"
   },
   {
     "id": 17,
     "name": "Broly",
-    "work": "Dragon Ball"
+    "source": "드래곤볼"
   },
   {
     "id": 18,
     "name": "Frieza",
-    "work": "Dragon Ball"
+    "source": "드래곤볼"
   },
   {
     "id": 19,
     "name": "Cell",
-    "work": "Dragon Ball"
+    "source": "드래곤볼"
   },
   {
     "id": 20,
     "name": "T-800",
-    "work": "The Terminator"
+    "source": "The Terminator"
   },
   {
     "id": 21,
     "name": "T-1000",
-    "work": "Terminator 2"
+    "source": "Terminator 2"
   },
   {
     "id": 22,
     "name": "Anton Chigurh",
-    "work": "No Country for Old Men"
+    "source": "No Country for Old Men"
   },
   {
     "id": 23,
     "name": "Rick Sanchez",
-    "work": "Rick and Morty"
+    "source": "Rick and Morty"
   },
   {
     "id": 24,
     "name": "Cave Johnson",
-    "work": "Portal"
+    "source": "Portal"
   },
   {
     "id": 25,
     "name": "GLaDOS",
-    "work": "Portal"
+    "source": "Portal"
   },
   {
     "id": 26,
     "name": "Megamind",
-    "work": "Megamind"
+    "source": "Megamind"
   },
   {
     "id": 27,
     "name": "Metro Man",
-    "work": "Megamind"
+    "source": "Megamind"
   },
   {
     "id": 28,
     "name": "The Penguin",
-    "work": "Gotham"
+    "source": "Gotham"
   },
   {
     "id": 29,
     "name": "The Riddler",
-    "work": "Gotham"
+    "source": "Gotham"
   },
   {
     "id": 30,
     "name": "Harvey Dent",
-    "work": "DC"
+    "source": "DC"
   },
   {
     "id": 31,
     "name": "Bill Cipher",
-    "work": "Gravity Falls"
+    "source": "Gravity Falls"
   },
   {
     "id": 32,
     "name": "Tony Stark",
-    "work": "Marvel"
+    "source": "Marvel"
   },
   {
     "id": 33,
     "name": "Steve Rogers",
-    "work": "Marvel"
+    "source": "Marvel"
   },
   {
     "id": 34,
     "name": "Doctor Octopus",
-    "work": "Marvel"
+    "source": "Marvel"
   },
   {
     "id": 35,
     "name": "King Bradley",
-    "work": "Fullmetal Alchemist"
+    "source": "Fullmetal Alchemist"
   },
   {
     "id": 36,
     "name": "Rikka Takanashi",
-    "work": "Love, Chunibyo & Other Delusions"
+    "source": "Love, Chunibyo & Other Delusions"
   },
   {
     "id": 37,
     "name": "Index Librorum Prohibitorum",
-    "work": "A Certain Magical Index"
+    "source": "A Certain Magical Index"
   },
   {
     "id": 38,
     "name": "Mikoto Misaka",
-    "work": "A Certain Scientific Railgun"
+    "source": "A Certain Scientific Railgun"
   },
   {
     "id": 39,
     "name": "Frenda Seivelun",
-    "work": "A Certain Magical Index"
+    "source": "A Certain Magical Index"
   },
   {
     "id": 40,
     "name": "Accelerator",
-    "work": "A Certain Magical Index"
+    "source": "A Certain Magical Index"
   },
   {
     "id": 41,
     "name": "Kuroko Shirai",
-    "work": "A Certain Scientific Railgun"
+    "source": "A Certain Scientific Railgun"
   },
   {
     "id": 42,
     "name": "Last Order",
-    "work": "A Certain Magical Index"
+    "source": "A Certain Magical Index"
   },
   {
     "id": 43,
     "name": "Ai Hinatsuru",
-    "work": "The Ryuo's Work Is Never Done!"
+    "source": "The Ryuo's source Is Never Done!"
   },
   {
     "id": 44,
     "name": "Chi",
-    "work": "Tiger Coming In"
+    "source": "Tiger Coming In"
   },
   {
     "id": 45,
     "name": "Rang-i",
-    "work": "Tiger Coming In"
+    "source": "Tiger Coming In"
   },
   {
     "id": 46,
     "name": "Iroha Isshiki",
-    "work": "My Teen Romantic Comedy SNAFU"
+    "source": "My Teen Romantic Comedy SNAFU"
   },
   {
     "id": 47,
     "name": "Yui Yuigahama",
-    "work": "My Teen Romantic Comedy SNAFU"
+    "source": "My Teen Romantic Comedy SNAFU"
   },
   {
     "id": 48,
     "name": "Miguel Caballero Rojo",
-    "work": "Tekken"
+    "source": "Tekken"
   },
   {
     "id": 49,
     "name": "Sergei Dragunov",
-    "work": "Tekken"
+    "source": "Tekken"
   },
   {
     "id": 50,
     "name": "Z",
-    "work": "One Piece Film Z"
+    "source": "One Piece Film Z"
   },
   {
     "id": 51,
     "name": "Shizuka Kuze",
-    "work": "Takopi's Original Sin"
+    "source": "Takopi's Original Sin"
   },
   {
     "id": 52,
     "name": "Frisk",
-    "work": "Undertale"
+    "source": "Undertale"
   },
   {
     "id": 53,
     "name": "Sans",
-    "work": "Undertale"
-  },
-  {
-    "id": 54,
-    "name": "Mikael",
-    "work": "Original Character"
+    "source": "Undertale"
   }
 ]

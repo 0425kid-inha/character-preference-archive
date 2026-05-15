@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>캐릭터 애착 유형 탐색 | 캐릭터 취향 기록 시스템</title>
+  <title>캐릭터 탐색 | 캐릭터 취향 기록 시스템</title>
 
-  <link rel="stylesheet" href="./styles/main.css" />
-  <link rel="stylesheet" href="./styles/pages/characters.css" />
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../styles/pages/characters.css" />
 </head>
 
 <body>
   <div class="app-layout">
-    <!-- 왼쪽 사이드바 -->
     <aside class="sidebar">
       <div class="sidebar-header">
         <div class="logo-mark">✦</div>
@@ -23,8 +22,9 @@
 
       <nav class="sidebar-nav">
         <a href="./index.html" class="nav-item">홈</a>
-        <a href="./characters.html" class="nav-item">캐릭터 탐색</a>
-        <a href="./affections.html" class="nav-item active">애착 유형 탐색</a>
+        <a href="./characters.html" class="nav-item active">캐릭터 탐색</a>
+        <a href="./codes.html" class="nav-item">코드 탐색</a>
+        <a href="./affections.html" class="nav-item">애착 유형</a>
         <a href="./memo.html" class="nav-item">기록/메모</a>
       </nav>
 
@@ -33,57 +33,187 @@
       </div>
     </aside>
 
-    <!-- 메인 영역 -->
-    <main class="main-content character-page">
-      <!-- 상단 바 -->
-      <header class="topbar">
-        <div class="search-box">
-          <input
-            id="global-search"
-            type="search"
-            placeholder="캐릭터 애착 유형, 설명, 키워드로 검색..."
-          />
-        </div>
-
-        <div class="topbar-actions">
-          <button type="button" class="icon-button" aria-label="테마 변경">☾</button>
-          <button type="button" class="icon-button" aria-label="즐겨찾기">★</button>
-        </div>
-      </header>
-
-      <!-- 페이지 헤더 -->
+    <main class="main-content characters-page">
       <section class="page-hero">
         <div class="page-hero-text">
-          <p class="eyebrow">Character affections</p>
-          <h2>애착 유형 탐색</h2>
+          <p class="eyebrow">Character Archive</p>
+          <h2>캐릭터 탐색</h2>
           <p>
-            캐릭터가 어떤 매력 구조로 분류되는지 확인합니다.
-            내적 필연성, 존재감, 광기, 보호본능 등 반복적으로 끌리는 애착 유형를 갤러리처럼 둘러볼 수 있습니다.
+            내가 애착을 느낀 캐릭터들을 모아보고, 애착 유형과 캐릭터 코드를 기준으로
+            다시 탐색합니다.
           </p>
         </div>
 
         <div class="page-hero-card">
-          <span class="hero-card-label">등록된 애착 유형</span>
-          <strong id="character-count">0</strong>
+          <span class="hero-card-label">등록된 캐릭터</span>
+          <strong id="character-count">54</strong>
           <p>개의 캐릭터</p>
         </div>
       </section>
 
-      <!-- 도구 영역 -->
-      <section class="character-toolbar panel">
-        <div class="toolbar-left">
-          <h3>캐릭터 갤러리</h3>
-          <p>카드를 눌러 해당 캐릭터의 상세 설명과 관련 캐릭터를 확인할 수 있습니다.</p>
+      <section class="character-archive panel">
+        <div class="archive-header">
+          <div>
+            <h3>캐릭터 갤러리</h3>
+            <p>카드를 선택하면 오른쪽에서 캐릭터 정보와 관련 노트를 확인할 수 있습니다.</p>
+          </div>
         </div>
-      </section>
 
-      <!-- 캐릭터 갤러리 -->
-      <section
-        id="character-gallery"
-        class="character-gallery"
-        aria-label="캐릭터 캐릭터 목록"
-      >
-       
+        <div class="archive-controls">
+          <div class="archive-search">
+            <input type="search" placeholder="캐릭터 이름, 작품, 코드 검색..." />
+          </div>
+
+          <select>
+            <option>전체 애착 유형</option>
+            <option>비극연민형</option>
+            <option>보호본능형</option>
+            <option>존재감형</option>
+            <option>귀여움형</option>
+          </select>
+
+          <select>
+            <option>전체 코드</option>
+            <option>내면갈등</option>
+            <option>의지</option>
+            <option>광기</option>
+            <option>존재감</option>
+          </select>
+
+          <select>
+            <option>이름순</option>
+            <option>최근 추가순</option>
+            <option>작품순</option>
+            <option>애착 강도순</option>
+          </select>
+        </div>
+
+        <div class="archive-body">
+          <section class="character-grid" id="character-grid" aria-label="캐릭터 목록">
+            <button class="character-card selected" type="button">
+              <span class="media-icon">🎬</span>
+              <img src="../images/characters/joker.png" alt="조커 이미지" />
+              <strong>Joker</strong>
+              <span>DC / Dark Knight</span>
+              <div class="mini-tags">
+                <em>존재감</em>
+                <em>광기</em>
+              </div>
+            </button>
+
+            <button class="character-card" type="button">
+              <span class="media-icon">📺</span>
+              <img src="../images/characters/batman.png" alt="배트맨 이미지" />
+              <strong>Batman</strong>
+              <span>DC</span>
+              <div class="mini-tags">
+                <em>의지</em>
+                <em>자기제약</em>
+              </div>
+            </button>
+
+            <button class="character-card" type="button">
+              <span class="media-icon">📺</span>
+              <img src="../images/characters/light-yagami.png" alt="라이토 이미지" />
+              <strong>Light Yagami</strong>
+              <span>Death Note</span>
+              <div class="mini-tags">
+                <em>필연성</em>
+                <em>대립</em>
+              </div>
+            </button>
+
+            <button class="character-card" type="button">
+              <span class="media-icon">📺</span>
+              <img src="../images/characters/l.png" alt="L 이미지" />
+              <strong>L</strong>
+              <span>Death Note</span>
+              <div class="mini-tags">
+                <em>지성</em>
+                <em>대립</em>
+              </div>
+            </button>
+
+            <button class="character-card" type="button">
+              <span class="media-icon">📺</span>
+              <img src="../images/characters/asuka.png" alt="아스카 이미지" />
+              <strong>Asuka</strong>
+              <span>Evangelion</span>
+              <div class="mini-tags">
+                <em>상처</em>
+                <em>자존심</em>
+              </div>
+            </button>
+
+            <button class="character-card" type="button">
+              <span class="media-icon">🎮</span>
+              <img src="../images/characters/t1000.png" alt="T-1000 이미지" />
+              <strong>T-1000</strong>
+              <span>Terminator 2</span>
+              <div class="mini-tags">
+                <em>존재감</em>
+                <em>불가해</em>
+              </div>
+            </button>
+            
+          </section>
+
+          <aside class="character-detail" id="character-detail" aria-label="선택된 캐릭터 상세 정보">
+            <div class="detail-top">
+              <span class="detail-type">🎬 영화</span>
+              <h3>Joker</h3>
+              <p class="detail-work">DC / The Dark Knight</p>
+            </div>
+
+            <div class="detail-profile">
+              <img src="../images/characters/joker.png" alt="조커 이미지" />
+
+              <div>
+                <h4>간단 설명</h4>
+                <p>
+                  질서와 도덕의 표면을 찢고, 인간과 사회의 취약한 균열을 드러내는 인물.
+                  단순한 악역이라기보다 배트맨과 세계관 전체를 시험하는 존재에 가깝다.
+                </p>
+              </div>
+            </div>
+
+            <div class="detail-section">
+              <h4>애착 유형</h4>
+              <div class="tag-group">
+                <span class="tag affection">비극연민형</span>
+                <span class="tag affection">존재감형</span>
+              </div>
+            </div>
+
+            <div class="detail-section">
+              <h4>캐릭터 코드</h4>
+              <div class="tag-group">
+                <span class="tag code">설명 불가능한 존재감</span>
+                <span class="tag code">광기</span>
+                <span class="tag code">세계와의 균열</span>
+              </div>
+            </div>
+
+            <div class="detail-section">
+              <h4>작성된 노트</h4>
+
+              <ul class="note-list">
+                <li>
+                  <a href="#">조커와 배트맨의 상호증명 관계</a>
+                  <span>2026.05.10</span>
+                </li>
+                <li>
+                  <a href="#">웃음, 슬픔, 광기의 공존</a>
+                  <span>2026.05.08</span>
+                </li>
+                <li>
+                  <a href="#">피상적 광기와 진짜 균열의 차이</a>
+                  <span>2026.05.05</span>
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </div>
       </section>
     </main>
   </div>
