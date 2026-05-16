@@ -1,488 +1,410 @@
 [
   {
     "character_id": 1,
-    "affection_type_ids": [
-      1,
-      2,
-      4,
-      9
-    ],
-    "notes": "상처를 사명과 규율로 바꾼 존재."
+    "main_affection_type_id": 1,
+    "sub_affection_type_ids": [
+      3,
+      6
+    ]
   },
   {
     "character_id": 2,
-    "affection_type_ids": [
-      4,
-      5,
-      6,
-      9
-    ],
-    "notes": "광기와 슬픔, 배트맨과의 관계성이 핵심."
+    "main_affection_type_id": 2,
+    "sub_affection_type_ids": [
+      3,
+      6
+    ]
   },
   {
     "character_id": 3,
-    "affection_type_ids": [
-      4,
-      5,
-      6,
-      9
-    ],
-    "notes": "L과의 적대적 이해 관계와 왜곡된 이상."
+    "main_affection_type_id": 9,
+    "sub_affection_type_ids": [
+      3,
+      6
+    ]
   },
   {
     "character_id": 4,
-    "affection_type_ids": [
+    "main_affection_type_id": 9,
+    "sub_affection_type_ids": [
       4,
-      5,
-      9
-    ],
-    "notes": "라이토와 서로를 이해하면서 파멸시키는 관계."
+      6
+    ]
   },
   {
     "character_id": 5,
-    "affection_type_ids": [
-      3,
-      6,
-      9
-    ],
-    "notes": "한 사람에게 삶 전체가 고정된 집착."
+    "main_affection_type_id": 3,
+    "sub_affection_type_ids": [
+      2
+    ]
   },
   {
     "character_id": 6,
-    "affection_type_ids": [
-      2,
-      6
-    ],
-    "notes": "뒤틀린 사랑과 무너진 신앙."
+    "main_affection_type_id": 2,
+    "sub_affection_type_ids": [
+      3
+    ]
   },
   {
     "character_id": 7,
-    "affection_type_ids": [
-      2,
-      3,
-      9
-    ],
-    "notes": "사랑과 상실 때문에 세계를 재구성하려는 인간."
+    "main_affection_type_id": 2,
+    "sub_affection_type_ids": [
+      
+    ]
   },
   {
     "character_id": 8,
-    "affection_type_ids": [
+    "main_affection_type_id": 1,
+    "sub_affection_type_ids": [
       2,
-      4,
-      8,
-      9
-    ],
-    "notes": "이해와 구원의 상징, 신비로운 비인간성."
+      3
+    ]
   },
   {
     "character_id": 9,
-    "affection_type_ids": [
-      2,
-      3,
-      8
-    ],
-    "notes": "인정욕구와 무너지는 자존심."
+    "main_affection_type_id": 3,
+    "sub_affection_type_ids": [
+      4,
+      7
+    ]
   },
   {
     "character_id": 10,
-    "affection_type_ids": [
-      2,
-      8,
-      9
-    ],
-    "notes": "공허한 존재감과 인간성의 경계."
+    "main_affection_type_id": 4,
+    "sub_affection_type_ids": [
+      3
+    ]
   },
   {
     "character_id": 11,
-    "affection_type_ids": [
-      1,
-      2,
-      10
-    ],
-    "notes": "상실 이후에도 삶을 긍정하는 성장."
+    "main_affection_type_id": 1,
+    "sub_affection_type_ids": [
+      5,
+      6
+    ]
   },
   {
     "character_id": 12,
-    "affection_type_ids": [
-      1,
-      5,
-      10
-    ],
-    "notes": "의지를 밀어붙이는 존재감."
+    "main_affection_type_id": 1,
+    "sub_affection_type_ids": [
+      6
+    ]
   },
   {
     "character_id": 13,
-    "affection_type_ids": [
-      2,
-      9
-    ],
-    "notes": "절망을 겪은 뒤 세계를 억제하려 한 존재."
+    "main_affection_type_id": 9,
+    "sub_affection_type_ids": [
+      3
+    ]
   },
   {
     "character_id": 14,
-    "affection_type_ids": [
-      5,
-      9
-    ],
-    "notes": "우주적 허무와 절망의 논리."
+    "main_affection_type_id": 9,
+    "sub_affection_type_ids": [
+      2
+    ]
   },
   {
     "character_id": 15,
-    "affection_type_ids": [
-      5,
-      6,
-      10
-    ],
-    "notes": "형태를 바꿔가며 이어지는 원초적 생명력."
+    "main_affection_type_id": 9,
+    "sub_affection_type_ids": [
+      
+    ]
   },
   {
     "character_id": 16,
-    "affection_type_ids": [
-      5,
-      6,
-      10
-    ],
-    "notes": "어린 광기와 끝까지 저항하는 생명력."
+    "main_affection_type_id": 2,
+    "sub_affection_type_ids": [
+
+    ]
   },
   {
     "character_id": 17,
-    "affection_type_ids": [
-      2,
-      5,
-      6
-    ],
-    "notes": "통제 불가능한 폭력과 비극적 괴물성."
+    "main_affection_type_id": 2,
+    "sub_affection_type_ids": [
+      3
+    ]
   },
   {
     "character_id": 18,
-    "affection_type_ids": [
-      5,
-      6
-    ],
-    "notes": "품위와 잔혹함, 압도적 악의 존재감."
+    "main_affection_type_id": 9,
+    "sub_affection_type_ids": [
+
+    ]
   },
   {
     "character_id": 19,
-    "affection_type_ids": [
-      5,
-      6,
-      9
-    ],
-    "notes": "완전체 욕망과 존재론적 오만."
+    "main_affection_type_id": 9,
+    "sub_affection_type_ids": [
+
+    ]
   },
   {
     "character_id": 20,
-    "affection_type_ids": [
-      5,
-      10
-    ],
-    "notes": "망가져도 끝까지 기능하는 생명력."
+    "main_affection_type_id": 2,
+    "sub_affection_type_ids": [
+
+    ]
   },
   {
     "character_id": 21,
-    "affection_type_ids": [
-      5,
-      10
-    ],
-    "notes": "차갑고 유동적인 추적자의 존재감."
+    "main_affection_type_id": 2,
+    "sub_affection_type_ids": [
+
+    ]
   },
   {
     "character_id": 22,
-    "affection_type_ids": [
-      5,
-      6,
-      9
-    ],
-    "notes": "인간보다 원리나 재앙에 가까운 존재."
+    "main_affection_type_id": 2,
+    "sub_affection_type_ids": [
+      
+    ]
   },
   {
     "character_id": 23,
-    "affection_type_ids": [
-      2,
-      3,
-      6,
-      9
-    ],
-    "notes": "허무와 지성, 감정 회피와 연결 갈망."
+    "main_affection_type_id": 9,
+    "sub_affection_type_ids": [
+      3
+    ]
   },
   {
     "character_id": 24,
-    "affection_type_ids": [
-      5,
-      6,
-      9,
-      10
-    ],
-    "notes": "설명 불가능한 광기와 생명력의 CEO."
+    "main_affection_type_id": 2,
+    "sub_affection_type_ids": [
+
+    ]
   },
   {
     "character_id": 25,
-    "affection_type_ids": [
-      5,
-      6,
-      9
-    ],
-    "notes": "인간과 기계, 냉소와 관계 욕구의 경계."
+    "main_affection_type_id": 9,
+    "sub_affection_type_ids": [
+      3
+    ]
   },
   {
     "character_id": 26,
-    "affection_type_ids": [
-      2,
-      3,
-      8,
-      9
-    ],
-    "notes": "악당 역할에 갇힌 외로운 천재."
+    "main_affection_type_id": 9,
+    "sub_affection_type_ids": [
+      6
+    ]
   },
   {
     "character_id": 27,
-    "affection_type_ids": [
-      2,
-      9
-    ],
-    "notes": "역할 강요와 자유의 문제."
+    "main_affection_type_id": 6,
+    "sub_affection_type_ids": [
+
+    ]
   },
   {
     "character_id": 28,
-    "affection_type_ids": [
-      2,
+    "main_affection_type_id": 9,
+    "sub_affection_type_ids": [
       3,
-      6
-    ],
-    "notes": "열등감과 행동력으로 왕좌에 오르는 존재."
+      2
+    ]
   },
   {
     "character_id": 29,
-    "affection_type_ids": [
-      2,
-      3,
-      6,
-      9
-    ],
-    "notes": "인정욕구와 지성이 광기로 변하는 과정."
+    "main_affection_type_id": 9,
+    "sub_affection_type_ids": [
+      3
+    ]
   },
   {
     "character_id": 30,
-    "affection_type_ids": [
-      2,
+    "main_affection_type_id": 1,
+    "sub_affection_type_ids": [
+      6,
       9
-    ],
-    "notes": "선의와 법을 믿던 인간의 붕괴."
+    ]
   },
   {
     "character_id": 31,
-    "affection_type_ids": [
-      5,
-      6,
-      9
-    ],
-    "notes": "초월적 장난과 공포, 다만 후반부에서 매력 감소."
+    "main_affection_type_id": 9,
+    "sub_affection_type_ids": [
+      2
+    ]
   },
   {
     "character_id": 32,
-    "affection_type_ids": [
-      1,
-      2,
-      9
-    ],
-    "notes": "공학자적 천재성과 속죄."
+    "main_affection_type_id": 9,
+    "sub_affection_type_ids": [
+      1
+    ]
   },
   {
     "character_id": 33,
-    "affection_type_ids": [
-      1,
-      2,
-      9
-    ],
-    "notes": "시대와 어긋난 신념의 인간."
+    "main_affection_type_id": 9,
+    "sub_affection_type_ids": [
+      3
+    ]
   },
   {
     "character_id": 34,
-    "affection_type_ids": [
-      2,
-      6,
-      9
-    ],
-    "notes": "과학자적 오만과 인간성 붕괴."
+    "main_affection_type_id": 9,
+    "sub_affection_type_ids": [
+      3
+    ]
   },
   {
     "character_id": 35,
-    "affection_type_ids": [
-      5,
+    "main_affection_type_id": 2,
+    "sub_affection_type_ids": [
+      3,
       9
-    ],
-    "notes": "압도적 절제와 품위를 가진 괴물."
+    ]
   },
   {
     "character_id": 36,
-    "affection_type_ids": [
-      2,
-      3,
-      8
-    ],
-    "notes": "상처를 망상 세계로 감싼 소녀."
+    "main_affection_type_id": 7,
+    "sub_affection_type_ids": [
+      4,
+      5
+    ]
   },
   {
     "character_id": 37,
-    "affection_type_ids": [
-      7,
-      8,
-      12
-    ],
-    "notes": "일상적으로 보호하고 싶은 존재."
+    "main_affection_type_id": 8,
+    "sub_affection_type_ids": [
+      6
+    ]
   },
   {
     "character_id": 38,
-    "affection_type_ids": [
-      1,
-      2,
-      8
-    ],
-    "notes": "책임감과 강한 의지, 츤데레적 애착."
+    "main_affection_type_id": 1,
+    "sub_affection_type_ids": [
+      7,
+      9
+    ]
   },
   {
     "character_id": 39,
-    "affection_type_ids": [
-      2,
-      8,
-      11
-    ],
-    "notes": "허무한 상실로 강하게 남은 캐릭터."
+    "main_affection_type_id": 7,
+    "sub_affection_type_ids": [
+      
+    ]
   },
   {
     "character_id": 40,
-    "affection_type_ids": [
-      2,
-      3,
-      5,
-      6
-    ],
-    "notes": "괴물성과 인간성, 속죄와 보호 본능."
+    "main_affection_type_id": 9,
+    "sub_affection_type_ids": [
+      3
+    ]
   },
   {
     "character_id": 41,
-    "affection_type_ids": [
-      1,
-      8,
-      9
-    ],
-    "notes": "변태 개그를 넘는 정의감과 책임감."
+    "main_affection_type_id": 1,
+    "sub_affection_type_ids": [
+      6
+    ]
   },
   {
     "character_id": 42,
-    "affection_type_ids": [
-      7,
-      8,
-      12
-    ],
-    "notes": "작고 밝지만 괴물의 인간성을 붙드는 존재."
+    "main_affection_type_id": 7,
+    "sub_affection_type_ids": [
+      6
+    ]
   },
   {
     "character_id": 43,
-    "affection_type_ids": [
-      8,
-      12
-    ],
-    "notes": "귀여움과 강한 몰입 에너지가 핵심."
+    "main_affection_type_id": 7,
+    "sub_affection_type_ids": [
+
+    ]
   },
   {
     "character_id": 44,
-    "affection_type_ids": [
-      7,
-      8,
-      12
-    ],
-    "notes": "순수한 헌신과 사랑스러움. 어린 광기 아님."
+    "main_affection_type_id": 7,
+    "sub_affection_type_ids": [
+      4
+    ]
   },
   {
     "character_id": 45,
-    "affection_type_ids": [
-      7,
-      8,
-      12
-    ],
-    "notes": "순수 애착형의 사랑스러운 존재."
+    "main_affection_type_id": 7,
+    "sub_affection_type_ids": [
+      4
+    ]
   },
   {
     "character_id": 46,
-    "affection_type_ids": [
-      3,
-      4,
-      8
-    ],
-    "notes": "능청스러움과 계산성, 현실적 불안정함."
+    "main_affection_type_id": 7,
+    "sub_affection_type_ids": [
+      
+    ]
   },
   {
     "character_id": 47,
-    "affection_type_ids": [
-      2,
-      3,
-      4,
-      8
-    ],
-    "notes": "관계를 잃고 싶지 않아 버티는 감정."
+    "main_affection_type_id": 6,
+    "sub_affection_type_ids": [
+      7
+    ]
   },
   {
     "character_id": 48,
-    "affection_type_ids": [
-      2,
-      3,
-      5
-    ],
-    "notes": "상실과 복수로 움직이는 날것의 인간성."
+    "main_affection_type_id": 9,
+    "sub_affection_type_ids": [
+      3
+    ]
   },
   {
     "character_id": 49,
-    "affection_type_ids": [
-      5,
-      11
-    ],
-    "notes": "과묵함과 전투 방식, 조종 경험에서 오는 체화."
+    "main_affection_type_id": 9,
+    "sub_affection_type_ids": [
+      2,
+      3
+    ]
   },
   {
     "character_id": 50,
-    "affection_type_ids": [
-      2,
-      9
-    ],
-    "notes": "이상을 잃은 노병의 비극."
+    "main_affection_type_id": 9,
+    "sub_affection_type_ids": [
+      3
+    ]
   },
   {
     "character_id": 51,
-    "affection_type_ids": [
-      2,
-      3,
-      8
-    ],
-    "notes": "상처 입은 채 요망하게 살아남으려는 아이."
+    "main_affection_type_id": 3,
+    "sub_affection_type_ids": [
+      4,
+      7
+    ]
   },
   {
     "character_id": 52,
-    "affection_type_ids": [
-      1,
-      4,
-      9
-    ],
-    "notes": "선함과 자비의 상징. 미카엘과의 대비."
+    "main_affection_type_id": 1,
+    "sub_affection_type_ids": [
+      2,
+      3
+    ]
   },
   {
     "character_id": 53,
-    "affection_type_ids": [
-      4,
-      9,
-      11
-    ],
-    "notes": "냉소적 관찰자이자 세계 구조를 아는 존재."
+    "main_affection_type_id": 9,
+    "sub_affection_type_ids": [
+      3
+    ]
   },
   {
     "character_id": 54,
-    "affection_type_ids": [
-      2,
-      3,
-      4,
-      6,
+    "main_affection_type_id": 2,
+    "sub_affection_type_ids": [
       9
-    ],
-    "notes": "선함을 믿고 싶어 테러와 시험으로 다가가는 자작 캐릭터."
+    ]
+  },
+  {
+    "character_id": 55,
+    "main_affection_type_id": 1,
+    "sub_affection_type_ids": [
+      3
+    ]
+  },
+  {
+    "character_id": 56,
+    "main_affection_type_id": 9,
+    "sub_affection_type_ids": [
+      3,
+      4
+    ]
   }
 ]

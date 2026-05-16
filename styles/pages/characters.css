@@ -221,6 +221,16 @@
     var(--shadow-md);
 }
 
+.character-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+
+  padding: 0;
+  min-width: 0;
+}
+
 /* ===== CARD TOP ===== */
 
 .character-card-top {
@@ -254,20 +264,55 @@
   line-height: 1;
 }
 
-.media-icon {
+/* ===== MAIN AFFECTION ICON ===== */
+
+.main-affection-icon {
   width: 24px;
   height: 24px;
-  display: grid;
-  place-items: center;
+  min-width: 24px;
+  min-height: 24px;
+
+  display: block;
+  object-fit: contain;
   flex-shrink: 0;
+
   border-radius: 8px;
-  background: var(--primary-soft);
-  font-size: 13px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  box-sizing: border-box;
 }
+
+.affection-icon-fallback {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 1;
+
+  background: transparent;
+  box-shadow: none;
+}
+
 
 /* ===== CARD IMAGE ===== */
 
-.character-card img,
+/* 중요:
+   카드 대표 이미지에만 84x84 스타일을 적용한다.
+   main-affection-icon에는 절대 적용하지 않는다.
+*/
+
+.character-card img:not(.main-affection-icon),
 .character-card-image-fallback {
   width: 84px;
   height: 84px;
@@ -277,7 +322,7 @@
   box-sizing: border-box;
 }
 
-.character-card img {
+.character-card img:not(.main-affection-icon) {
   display: block;
   object-fit: cover;
   background:
@@ -307,7 +352,24 @@
   white-space: nowrap;
 }
 
-.character-card > span:not(.media-icon) {
+.character-card .character-source {
+  display: block;
+
+  width: 100%;
+  max-width: 100%;
+
+  margin-top: 3px;
+
+  color: var(--text-soft);
+  font-size: 11px;
+  line-height: 1.25;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.character-card > span:not(.media-icon):not(.affection-icon-fallback) {
   display: block;
   margin-top: 5px;
   color: var(--text-soft);
@@ -320,7 +382,7 @@
 
 /* ===== TAGS ===== */
 
-.mini-tags {
+.main-affection-tag {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -330,7 +392,7 @@
   overflow: hidden;
 }
 
-.mini-tags em {
+.main-affection-tag em {
   max-width: 100%;
   padding: 4px 6px;
   border-radius: 999px;
@@ -395,6 +457,7 @@
   pointer-events: none;
   transform: translateX(24px);
   transition:
+    width 0.24s ease,
     opacity 0.22s ease,
     transform 0.22s ease;
   display: flex;
@@ -409,7 +472,10 @@
   transform: translateX(0);
 }
 
-/* 상세창의 고정 상단바 */
+.character-detail.note-open {
+  width: 720px;
+}
+
 .detail-top {
   flex: 0 0 auto;
   position: relative;
@@ -425,13 +491,21 @@
     var(--surface);
 }
 
-/* 상세창에서 실제로 스크롤되는 영역 */
 .detail-content {
   flex: 1 1 auto;
   min-height: 0;
   padding: 18px 22px 22px;
   overflow-y: auto;
   box-sizing: border-box;
+}
+
+.detail-character-view,
+.detail-note-view {
+  width: 100%;
+}
+
+.hidden {
+  display: none;
 }
 
 .detail-affection-score {
@@ -614,6 +688,78 @@
 .note-loading {
   color: var(--text-muted);
   font-size: 18px;
+}
+
+/* ===== NOTE VIEW ===== */
+
+.detail-note-view {
+  width: 100%;
+}
+
+.note-view-header {
+  margin-bottom: 28px;
+}
+
+.note-back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 16px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--text-soft);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.note-back-button:hover {
+  color: var(--primary);
+}
+
+.note-view-title {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+}
+
+.note-view-date {
+  margin-top: 8px;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.note-markdown {
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.note-markdown h1,
+.note-markdown h2,
+.note-markdown h3 {
+  margin-top: 34px;
+  margin-bottom: 14px;
+  line-height: 1.3;
+}
+
+.note-markdown p {
+  margin: 0 0 18px;
+}
+
+.note-markdown blockquote {
+  margin: 24px 0;
+  padding: 14px 18px;
+  border-left: 3px solid var(--primary);
+  border-radius: 12px;
+  background: var(--surface-soft);
+  color: var(--text-soft);
+}
+
+.note-markdown strong {
+  color: var(--primary-dark);
 }
 
 /* ===== RESPONSIVE ===== */

@@ -47,7 +47,7 @@ function createaffectionCard(affection) {
 
   button.innerHTML = `
     <div class="affection-card-image">
-      <img src="../images/affections/${affection.id}.png" alt="${affection.name} 아이콘" />
+      <img src="../images/icons/affections/${affection.id}.png" alt="${affection.name} 아이콘" />
     </div>
 
     <div class="affection-card-body">
